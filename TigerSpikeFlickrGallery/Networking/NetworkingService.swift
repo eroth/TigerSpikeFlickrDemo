@@ -104,7 +104,9 @@ class VanillaNetworking : NetworkingService {
 		let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
 		let dataTask = session.dataTask(with: request) { (data, URLResponse, error) in
 			if let e = error {
-				errorCompletion(e)
+				DispatchQueue.main.async {
+					errorCompletion(e)
+				}
 				
 				return
 			}
@@ -115,7 +117,9 @@ class VanillaNetworking : NetworkingService {
 			do {
 				let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
 				print(json)
-				successCompletion(json)
+				DispatchQueue.main.async {
+					successCompletion(json)
+				}
 			} catch {
 				print("JSON deserialization error")
 			}
