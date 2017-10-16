@@ -13,6 +13,8 @@
 		569273771F94B47000BF308D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569273761F94B47000BF308D /* Assets.xcassets */; };
 		5692737A1F94B47000BF308D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569273781F94B47000BF308D /* LaunchScreen.storyboard */; };
 		569273851F94B47000BF308D /* TigerSpikeFlickrGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569273841F94B47000BF308D /* TigerSpikeFlickrGalleryTests.swift */; };
+		569273911F94B9BB00BF308D /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569273901F94B9BB00BF308D /* PhotosAPI.swift */; };
+		56B7B4F81F951F5600DB11A9 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B4F71F951F5600DB11A9 /* NetworkingService.swift */; };
 		B1388DBEBACFF828AA502591 /* Pods_TigerSpikeFlickrGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */; };
 		E7B516EDF793FA70EA3B6107 /* Pods_TigerSpikeFlickrGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBCCCFCF4CA2B76A6845FD0 /* Pods_TigerSpikeFlickrGalleryTests.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		569273801F94B47000BF308D /* TigerSpikeFlickrGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TigerSpikeFlickrGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		569273841F94B47000BF308D /* TigerSpikeFlickrGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerSpikeFlickrGalleryTests.swift; sourceTree = "<group>"; };
 		569273861F94B47000BF308D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		569273901F94B9BB00BF308D /* PhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
+		56B7B4F71F951F5600DB11A9 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		58247A4D8C338E0A0F508539 /* Pods-TigerSpikeFlickrGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGallery/Pods-TigerSpikeFlickrGallery.release.xcconfig"; sourceTree = "<group>"; };
 		628E829FF5DE524212FFEDED /* Pods-TigerSpikeFlickrGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGalleryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGalleryTests/Pods-TigerSpikeFlickrGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
 		6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerSpikeFlickrGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +95,8 @@
 			children = (
 				5692736F1F94B47000BF308D /* AppDelegate.swift */,
 				569273711F94B47000BF308D /* ViewController.swift */,
+				56B7B4F91F951FED00DB11A9 /* API */,
+				5692738F1F94B95600BF308D /* Networking */,
 				569273731F94B47000BF308D /* Main.storyboard */,
 				569273761F94B47000BF308D /* Assets.xcassets */,
 				569273781F94B47000BF308D /* LaunchScreen.storyboard */,
@@ -106,6 +112,22 @@
 				569273861F94B47000BF308D /* Info.plist */,
 			);
 			path = TigerSpikeFlickrGalleryTests;
+			sourceTree = "<group>";
+		};
+		5692738F1F94B95600BF308D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				56B7B4F71F951F5600DB11A9 /* NetworkingService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		56B7B4F91F951FED00DB11A9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				569273901F94B9BB00BF308D /* PhotosAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		C7C625845EE6E81920930636 /* Frameworks */ = {
@@ -337,7 +359,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				569273721F94B47000BF308D /* ViewController.swift in Sources */,
+				569273911F94B9BB00BF308D /* PhotosAPI.swift in Sources */,
 				569273701F94B47000BF308D /* AppDelegate.swift in Sources */,
+				56B7B4F81F951F5600DB11A9 /* NetworkingService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
