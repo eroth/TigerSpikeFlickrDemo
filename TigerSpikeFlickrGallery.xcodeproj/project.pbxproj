@@ -13,6 +13,8 @@
 		569273771F94B47000BF308D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569273761F94B47000BF308D /* Assets.xcassets */; };
 		5692737A1F94B47000BF308D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569273781F94B47000BF308D /* LaunchScreen.storyboard */; };
 		569273851F94B47000BF308D /* TigerSpikeFlickrGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569273841F94B47000BF308D /* TigerSpikeFlickrGalleryTests.swift */; };
+		B1388DBEBACFF828AA502591 /* Pods_TigerSpikeFlickrGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */; };
+		E7B516EDF793FA70EA3B6107 /* Pods_TigerSpikeFlickrGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBCCCFCF4CA2B76A6845FD0 /* Pods_TigerSpikeFlickrGalleryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250455797C535D9AFC39FB88 /* Pods-TigerSpikeFlickrGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGallery/Pods-TigerSpikeFlickrGallery.debug.xcconfig"; sourceTree = "<group>"; };
+		395CCA80CCAD906729FD7E58 /* Pods-TigerSpikeFlickrGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGalleryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGalleryTests/Pods-TigerSpikeFlickrGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5692736C1F94B47000BF308D /* TigerSpikeFlickrGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TigerSpikeFlickrGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5692736F1F94B47000BF308D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		569273711F94B47000BF308D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		569273801F94B47000BF308D /* TigerSpikeFlickrGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TigerSpikeFlickrGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		569273841F94B47000BF308D /* TigerSpikeFlickrGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerSpikeFlickrGalleryTests.swift; sourceTree = "<group>"; };
 		569273861F94B47000BF308D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58247A4D8C338E0A0F508539 /* Pods-TigerSpikeFlickrGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGallery/Pods-TigerSpikeFlickrGallery.release.xcconfig"; sourceTree = "<group>"; };
+		628E829FF5DE524212FFEDED /* Pods-TigerSpikeFlickrGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGalleryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGalleryTests/Pods-TigerSpikeFlickrGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
+		6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerSpikeFlickrGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBCCCFCF4CA2B76A6845FD0 /* Pods_TigerSpikeFlickrGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerSpikeFlickrGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1388DBEBACFF828AA502591 /* Pods_TigerSpikeFlickrGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B516EDF793FA70EA3B6107 /* Pods_TigerSpikeFlickrGalleryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				5692736E1F94B47000BF308D /* TigerSpikeFlickrGallery */,
 				569273831F94B47000BF308D /* TigerSpikeFlickrGalleryTests */,
 				5692736D1F94B47000BF308D /* Products */,
+				E942E8F268657977BD5B9AA4 /* Pods */,
+				C7C625845EE6E81920930636 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = TigerSpikeFlickrGalleryTests;
 			sourceTree = "<group>";
 		};
+		C7C625845EE6E81920930636 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */,
+				FDBCCCFCF4CA2B76A6845FD0 /* Pods_TigerSpikeFlickrGalleryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E942E8F268657977BD5B9AA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				250455797C535D9AFC39FB88 /* Pods-TigerSpikeFlickrGallery.debug.xcconfig */,
+				58247A4D8C338E0A0F508539 /* Pods-TigerSpikeFlickrGallery.release.xcconfig */,
+				395CCA80CCAD906729FD7E58 /* Pods-TigerSpikeFlickrGalleryTests.debug.xcconfig */,
+				628E829FF5DE524212FFEDED /* Pods-TigerSpikeFlickrGalleryTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 569273891F94B47000BF308D /* Build configuration list for PBXNativeTarget "TigerSpikeFlickrGallery" */;
 			buildPhases = (
+				DE89437567B208426BA5FC00 /* [CP] Check Pods Manifest.lock */,
 				569273681F94B47000BF308D /* Sources */,
 				569273691F94B47000BF308D /* Frameworks */,
 				5692736A1F94B47000BF308D /* Resources */,
+				DB53430CDA7380BAEE858B59 /* [CP] Embed Pods Frameworks */,
+				93924F9E07B3CA450BAF3FB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5692738C1F94B47000BF308D /* Build configuration list for PBXNativeTarget "TigerSpikeFlickrGalleryTests" */;
 			buildPhases = (
+				292B67C9FF18A6C05B86E776 /* [CP] Check Pods Manifest.lock */,
 				5692737C1F94B47000BF308D /* Sources */,
 				5692737D1F94B47000BF308D /* Frameworks */,
 				5692737E1F94B47000BF308D /* Resources */,
+				696BA07371E310A2E9106227 /* [CP] Embed Pods Frameworks */,
+				2905ECF2212EA968D7FA21B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +231,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2905ECF2212EA968D7FA21B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerSpikeFlickrGalleryTests/Pods-TigerSpikeFlickrGalleryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		292B67C9FF18A6C05B86E776 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TigerSpikeFlickrGalleryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		696BA07371E310A2E9106227 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerSpikeFlickrGalleryTests/Pods-TigerSpikeFlickrGalleryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93924F9E07B3CA450BAF3FB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerSpikeFlickrGallery/Pods-TigerSpikeFlickrGallery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB53430CDA7380BAEE858B59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TigerSpikeFlickrGallery/Pods-TigerSpikeFlickrGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE89437567B208426BA5FC00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TigerSpikeFlickrGallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		569273681F94B47000BF308D /* Sources */ = {
@@ -351,6 +488,7 @@
 		};
 		5692738A1F94B47000BF308D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 250455797C535D9AFC39FB88 /* Pods-TigerSpikeFlickrGallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +503,7 @@
 		};
 		5692738B1F94B47000BF308D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58247A4D8C338E0A0F508539 /* Pods-TigerSpikeFlickrGallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +518,7 @@
 		};
 		5692738D1F94B47000BF308D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 395CCA80CCAD906729FD7E58 /* Pods-TigerSpikeFlickrGalleryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -395,6 +535,7 @@
 		};
 		5692738E1F94B47000BF308D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 628E829FF5DE524212FFEDED /* Pods-TigerSpikeFlickrGalleryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
