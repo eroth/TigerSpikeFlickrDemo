@@ -25,7 +25,7 @@ class PhotosAPI {
 		                                 successCompletion: { responseObject in
 											
 		}, errorCompletion: { error in
-			
+
 		})
 	}
 }

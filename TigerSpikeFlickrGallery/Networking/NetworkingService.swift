@@ -105,6 +105,8 @@ class VanillaNetworking : NetworkingService {
 		let dataTask = session.dataTask(with: request) { (data, URLResponse, error) in
 			if let e = error {
 				errorCompletion(e)
+				
+				return
 			}
 			if let responseBody = String(data: data!, encoding: String.Encoding.utf8) {
 				print("responseBodyString: \(responseBody.description)")
