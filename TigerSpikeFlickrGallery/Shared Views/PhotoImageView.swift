@@ -9,6 +9,10 @@
 import UIKit
 
 class PhotoImageView: UIImageView {
+	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+	}
 
 	override init(image: UIImage?) {
 		super.init(image: image)
@@ -19,6 +23,6 @@ class PhotoImageView: UIImageView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		self.image = image
+//		self.image = image
 	}
 }
