@@ -11,18 +11,10 @@ import SDWebImage
 
 class PhotoImageView: UIImageView {
 	
-	override func awakeFromNib() {
-		super.awakeFromNib()
-	}
-
-	override init(image: UIImage?) {
-		super.init(image: image)
-		
-		self.image = image
-	}
-	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+		
+		self.contentMode = UIViewContentMode.scaleAspectFill
 	}
 	
 	func setPhotoImage(forURLString: String) {

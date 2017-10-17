@@ -43,11 +43,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Au-rn-QGu"/>
+                    <connections>
+                        <outlet property="mainPhotosCollectionViewObject" destination="BSH-l1-Is2" id="dYd-EC-z6D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="BSH-l1-Is2" userLabel="Main Photos Data Object" customClass="CollectionViewObject" customModule="TigerSpikeFlickrGallery" customModuleProvider="target">
                     <connections>
-                        <outlet property="mainPhotosCollectionView" destination="sMK-dJ-nGQ" id="wAK-km-U1K"/>
+                        <outlet property="mainPhotosCollectionView" destination="sMK-dJ-nGQ" id="bGp-Dh-GcW"/>
                     </connections>
                 </customObject>
             </objects>

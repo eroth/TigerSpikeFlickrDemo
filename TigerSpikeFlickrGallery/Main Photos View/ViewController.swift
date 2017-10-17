@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 		
 		let photosAPI = PhotosAPI.init(networkingService: VanillaNetworking())
 		photosAPI.getRecentPhotos(successCompletion: { flickrRecentPhotos in
-			
+			self.mainPhotosCollectionViewObject.photoDataSource = flickrRecentPhotos
 		}) { (error) in
 			
 		}
