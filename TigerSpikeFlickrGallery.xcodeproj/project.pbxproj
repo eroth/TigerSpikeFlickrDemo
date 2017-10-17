@@ -22,6 +22,8 @@
 		56B7B5061F9605F500DB11A9 /* PhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B5051F9605F500DB11A9 /* PhotoImageView.swift */; };
 		56B7B50D1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B50B1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.swift */; };
 		56B7B50E1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B7B50C1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.xib */; };
+		56B7B5181F969C3300DB11A9 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7B5161F969C3300DB11A9 /* PhotoDetailViewController.swift */; };
+		56B7B5191F969C3300DB11A9 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56B7B5171F969C3300DB11A9 /* PhotoDetailViewController.xib */; };
 		B1388DBEBACFF828AA502591 /* Pods_TigerSpikeFlickrGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */; };
 		E7B516EDF793FA70EA3B6107 /* Pods_TigerSpikeFlickrGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBCCCFCF4CA2B76A6845FD0 /* Pods_TigerSpikeFlickrGalleryTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		56B7B5051F9605F500DB11A9 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
 		56B7B50B1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosFeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		56B7B50C1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosFeedCollectionViewCell.xib; sourceTree = "<group>"; };
+		56B7B5161F969C3300DB11A9 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		56B7B5171F969C3300DB11A9 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
 		58247A4D8C338E0A0F508539 /* Pods-TigerSpikeFlickrGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGallery/Pods-TigerSpikeFlickrGallery.release.xcconfig"; sourceTree = "<group>"; };
 		628E829FF5DE524212FFEDED /* Pods-TigerSpikeFlickrGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TigerSpikeFlickrGalleryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TigerSpikeFlickrGalleryTests/Pods-TigerSpikeFlickrGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
 		6BF91C1EFA18C92316ED8FCF /* Pods_TigerSpikeFlickrGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TigerSpikeFlickrGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +111,7 @@
 		5692736E1F94B47000BF308D /* TigerSpikeFlickrGallery */ = {
 			isa = PBXGroup;
 			children = (
+				56B7B50F1F9691DE00DB11A9 /* Detail Photo View */,
 				56B7B5041F96054200DB11A9 /* Shared Views */,
 				56B7B5011F96001600DB11A9 /* Main Photos Feed View */,
 				56B7B4FC1F952E1100DB11A9 /* Model */,
@@ -173,6 +178,15 @@
 				56B7B5051F9605F500DB11A9 /* PhotoImageView.swift */,
 			);
 			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		56B7B50F1F9691DE00DB11A9 /* Detail Photo View */ = {
+			isa = PBXGroup;
+			children = (
+				56B7B5161F969C3300DB11A9 /* PhotoDetailViewController.swift */,
+				56B7B5171F969C3300DB11A9 /* PhotoDetailViewController.xib */,
+			);
+			path = "Detail Photo View";
 			sourceTree = "<group>";
 		};
 		C7C625845EE6E81920930636 /* Frameworks */ = {
@@ -284,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B7B5191F969C3300DB11A9 /* PhotoDetailViewController.xib in Resources */,
 				56B7B50E1F962F9500DB11A9 /* PhotosFeedCollectionViewCell.xib in Resources */,
 				5692737A1F94B47000BF308D /* LaunchScreen.storyboard in Resources */,
 				569273771F94B47000BF308D /* Assets.xcassets in Resources */,
@@ -412,6 +427,7 @@
 				569273721F94B47000BF308D /* PhotosFeedViewController.swift in Sources */,
 				56B7B5031F96035B00DB11A9 /* PhotosFeedCollectionViewObject.swift in Sources */,
 				569273911F94B9BB00BF308D /* PhotosAPI.swift in Sources */,
+				56B7B5181F969C3300DB11A9 /* PhotoDetailViewController.swift in Sources */,
 				56B7B5001F95EA7100DB11A9 /* FlickrPhoto.swift in Sources */,
 				56B7B5061F9605F500DB11A9 /* PhotoImageView.swift in Sources */,
 				569273701F94B47000BF308D /* AppDelegate.swift in Sources */,

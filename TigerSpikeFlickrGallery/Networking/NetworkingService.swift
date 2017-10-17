@@ -106,18 +106,20 @@ class VanillaNetworking : NetworkingService {
 				
 				return
 			}
-			if let responseBody = String(data: data!, encoding: String.Encoding.utf8) {
-				print("responseBodyString: \(responseBody.description)")
-			}
-			
-			do {
-				let json = try JSONSerialization.jsonObject(with: data!) as! [String : Any]
-				print(json)
-				DispatchQueue.main.async {
-					successCompletion(json)
+			if let potentiallyBadFlickrJSONString = String(data: data!, encoding: String.Encoding.utf8) {
+				let validFlickrJSONString = potentiallyBadFlickrJSONString.replacingOccurrences(of: "\'", with: "'")
+				print("validFlickrJSONString: \(validFlickrJSONString.description)")
+				if let validFlickrData = validFlickrJSONString.data(using: String.Encoding.utf8) {
+					do {
+						let json = try JSONSerialization.jsonObject(with: validFlickrData) as! [String : Any]
+						print(json)
+						DispatchQueue.main.async {
+							successCompletion(json)
+						}
+					} catch {
+						print("JSON deserialization error")
+					}
 				}
-			} catch {
-				print("JSON deserialization error")
 			}
 		}
 		
