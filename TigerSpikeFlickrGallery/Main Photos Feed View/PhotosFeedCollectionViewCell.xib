@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotosFeedCollectionViewCell" customModule="TigerSpikeFlickrGallery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="184" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="184" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-mg-tE5" customClass="PhotoImageView" customModule="TigerSpikeFlickrGallery" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="184" height="175"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fGK-mg-tE5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4LE-On-32p"/>
+                <constraint firstAttribute="bottom" secondItem="fGK-mg-tE5" secondAttribute="bottom" id="7KL-66-dGg"/>
+                <constraint firstItem="fGK-mg-tE5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hDi-3l-HZE"/>
+                <constraint firstAttribute="trailing" secondItem="fGK-mg-tE5" secondAttribute="trailing" id="wc6-xD-Qvv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="184" height="175"/>
+            <connections>
+                <outlet property="photoImageView" destination="fGK-mg-tE5" id="IRV-wg-ZC2"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="25.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
