@@ -11,10 +11,10 @@ import Foundation
 class FlickrPhoto {
 	var title: String
 	var link: String
-	var mediaURL: String
-	var dateTaken: String
+	var mediaURLString: String
+	var dateTakenString: String
 	var photoDescription: String
-	var publishedDate: String
+	var publishedDateString: String
 	var author: String
 	var authorID: String
 	var tags: String
@@ -30,10 +30,10 @@ class FlickrPhoto {
 			let mediaURL = media["m"] as? String else {
 				throw DeserializationError.missingKey("m")
 		}
-		guard let dateTaken = photoData["date_taken"] as? String else {
+		guard let dateTakenString = photoData["date_taken"] as? String else {
 			throw DeserializationError.missingKey("date_taken")
 		}
-		guard let publishedDate = photoData["published"] as? String else {
+		guard let publishedDateString = photoData["published"] as? String else {
 			throw DeserializationError.missingKey("published")
 		}
 		guard let photoDescription = photoData["description"] as? String else {
@@ -51,9 +51,9 @@ class FlickrPhoto {
 		
 		self.title = title
 		self.link = link
-		self.mediaURL = mediaURL
-		self.dateTaken = dateTaken
-		self.publishedDate = publishedDate
+		self.mediaURLString = mediaURL
+		self.dateTakenString = dateTakenString
+		self.publishedDateString = publishedDateString
 		self.photoDescription = photoDescription
 		self.author = author
 		self.authorID = authorID
