@@ -9,6 +9,11 @@
 import Foundation
 
 struct Constants {
+	
+	// Networking
 	static let API_HOST: String = "api.flickr.com"
 	static let RECENT_PHOTOS_ROUTE = "/services/feeds/photos_public.gne"
+	
+	// Cell Identifiers
+	static let PhotosFeedCollectionViewCellReuseIdentifier = "PhotosFeedCollectionViewCellReuseIdentifier"
 }
