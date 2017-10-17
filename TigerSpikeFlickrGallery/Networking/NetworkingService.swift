@@ -22,20 +22,18 @@ struct URLConfig {
 	}
 	
 	var url: URL? {
-		get {
-			var urlComponents = URLComponents()
-			urlComponents.scheme = scheme
-			urlComponents.host = host
-			urlComponents.path = path
-			
-			if let components = queryComponents {
-				urlComponents.queryItems = components.map { URLQueryItem(name: $0, value: $1)}
-			}
-			
-			guard let url = urlComponents.url else { return nil }
-			
-			return url
+		var urlComponents = URLComponents()
+		urlComponents.scheme = scheme
+		urlComponents.host = host
+		urlComponents.path = path
+		
+		if let components = queryComponents {
+			urlComponents.queryItems = components.map { URLQueryItem(name: $0, value: $1) }
 		}
+		
+		guard let url = urlComponents.url else { return nil }
+		
+		return url
 	}
 }
 
@@ -57,20 +55,18 @@ struct QueryParams {
 	var queryCallback: QueryCallback?
 	
 	var params: [String : String] {
-		get {
-			var temp = [String:String]()
-			if let format = queryFormat {
-				temp["format"] = format.rawValue
-			}
-			if let langauge = queryLanguage {
-				temp["lang"] = langauge.rawValue
-			}
-			if let callback = queryCallback {
-				temp["nojsoncallback"] = callback.rawValue
-			}
-			
-			return temp
+		var temp = [String:String]()
+		if let format = queryFormat {
+			temp["format"] = format.rawValue
 		}
+		if let langauge = queryLanguage {
+			temp["lang"] = langauge.rawValue
+		}
+		if let callback = queryCallback {
+			temp["nojsoncallback"] = callback.rawValue
+		}
+		
+		return temp
 	}
 	
 	init(format: QueryFormat = .json, language: QueryLanguage = .english, callback: QueryCallback = .noJSONCallback) {
