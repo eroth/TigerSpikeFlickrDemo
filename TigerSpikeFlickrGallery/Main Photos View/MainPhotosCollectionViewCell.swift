@@ -15,12 +15,7 @@ class MainPhotosCollectionViewCell: UICollectionViewCell {
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-		self.layer.borderColor = UIColor.yellow.cgColor
+		self.layer.borderColor = UIColor.white.cgColor
 		self.layer.borderWidth = 1
     }
-
-	func setCellImage(image: UIImage) {
-		photoImageView.image = image
-	}
-
 }

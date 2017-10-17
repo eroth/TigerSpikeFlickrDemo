@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoImageView: UIImageView {
 	
@@ -22,7 +23,11 @@ class PhotoImageView: UIImageView {
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		
-//		self.image = image
+	}
+	
+	func setPhotoImage(forURLString: String) {
+		self.sd_setShowActivityIndicatorView(true)
+		self.sd_setIndicatorStyle(.gray)
+		self.sd_setImage(with: URL(string: forURLString))
 	}
 }

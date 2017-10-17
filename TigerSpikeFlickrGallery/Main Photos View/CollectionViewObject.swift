@@ -42,12 +42,13 @@ class CollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionView
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.MainPhotosCollectionViewCellReuseIdentifier, for: indexPath) as! MainPhotosCollectionViewCell
-			photoCell.setCellImage(image: UIImage.from(color: UIColor.blue))
+			photoCell.photoImageView.setPhotoImage(forURLString: "https://farm5.staticflickr.com/4451/23887874148_0c6e5732b6_m.jpg")
 		
 		return photoCell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.bounds.width/2, height: 100)
+		let widthHeight = collectionView.bounds.width/2
+		return CGSize(width: widthHeight, height: widthHeight)
 	}
 }
