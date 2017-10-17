@@ -22,6 +22,10 @@ class ViewController: UIViewController {
 		}) { (error) in
 			
 		}
+		
+		mainPhotosCollectionViewObject.didSelectPhotoClosure = { selectedPhotoData in
+			
+		}
 	}
 
 }

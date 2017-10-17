@@ -11,6 +11,9 @@ import UIKit
 
 class CollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
+	typealias DidSelectPhotoClosure = (_ photoData : FlickrPhoto) -> Void
+	
+	var didSelectPhotoClosure: DidSelectPhotoClosure?
 	var photoDataSource: FlickrRecentPhotos? {
 		didSet {
 			mainPhotosCollectionView.reloadData()
@@ -43,6 +46,15 @@ class CollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionView
 		}
 		
 		return photoCell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if let photoData = photoDataSource?.photoData[indexPath.row] as FlickrPhoto? {
+			didSelectPhotoClosure!(photoData)
+			print(photoData.title)
+			print(photoData.mediaURLString)
+			print(photoData.photoDescription)
+		}
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
