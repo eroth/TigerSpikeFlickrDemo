@@ -15,5 +15,5 @@ struct Constants {
 	static let RECENT_PHOTOS_ROUTE = "/services/feeds/photos_public.gne"
 	
 	// Cell Identifiers
-	static let MainPhotosCollectionViewCellReuseIdentifier = "MainPhotosCollectionViewCellReuseIdentifier"
+	static let PhotosFeedCollectionViewCellReuseIdentifier = "PhotosFeedCollectionViewCellReuseIdentifier"
 }

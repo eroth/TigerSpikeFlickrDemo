@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PhotosFeedCollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
 	typealias DidSelectPhotoClosure = (_ photoData : FlickrPhoto) -> Void
 	
@@ -22,7 +22,7 @@ class CollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionView
 	
 	@IBOutlet weak var mainPhotosCollectionView: UICollectionView! {
 		didSet {
-			mainPhotosCollectionView.register(UINib.init(nibName: "MainPhotosCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: Constants.MainPhotosCollectionViewCellReuseIdentifier)
+			mainPhotosCollectionView.register(UINib.init(nibName: "PhotosFeedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: Constants.PhotosFeedCollectionViewCellReuseIdentifier)
 		}
 	}
 	
@@ -39,7 +39,7 @@ class CollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionView
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.MainPhotosCollectionViewCellReuseIdentifier, for: indexPath) as! MainPhotosCollectionViewCell
+		let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.PhotosFeedCollectionViewCellReuseIdentifier, for: indexPath) as! PhotosFeedCollectionViewCell
 		if let photoData = photoDataSource?.photoData[indexPath.row] as FlickrPhoto? {
 			let urlString = photoData.mediaURLString
 			photoCell.photoImageView.setPhotoImage(forURLString: urlString)

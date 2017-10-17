@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PhotosFeedViewController.swift
 //  TigerSpikeFlickrGallery
 //
 //  Created by Evan Roth on 10/16/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PhotosFeedViewController: UIViewController {
 
-	@IBOutlet var mainPhotosCollectionViewObject: CollectionViewObject!
+	@IBOutlet var mainPhotosCollectionViewObject: PhotosFeedCollectionViewObject!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
