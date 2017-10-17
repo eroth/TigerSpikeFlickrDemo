@@ -22,20 +22,18 @@ struct URLConfig {
 	}
 	
 	var url: URL? {
-		get {
-			var urlComponents = URLComponents()
-			urlComponents.scheme = scheme
-			urlComponents.host = host
-			urlComponents.path = path
-			
-			if let components = queryComponents {
-				urlComponents.queryItems = components.map { URLQueryItem(name: $0, value: $1)}
-			}
-			
-			guard let url = urlComponents.url else { return nil }
-			
-			return url
+		var urlComponents = URLComponents()
+		urlComponents.scheme = scheme
+		urlComponents.host = host
+		urlComponents.path = path
+		
+		if let components = queryComponents {
+			urlComponents.queryItems = components.map { URLQueryItem(name: $0, value: $1) }
 		}
+		
+		guard let url = urlComponents.url else { return nil }
+		
+		return url
 	}
 }
 
@@ -56,21 +54,19 @@ struct QueryParams {
 	var queryLanguage: QueryLanguage?
 	var queryCallback: QueryCallback?
 	
-	var params: [String:String] {
-		get {
-			var temp = [String:String]()
-			if let format = queryFormat {
-				temp["format"] = format.rawValue
-			}
-			if let langauge = queryLanguage {
-				temp["lang"] = langauge.rawValue
-			}
-			if let callback = queryCallback {
-				temp["nojsoncallback"] = callback.rawValue
-			}
-			
-			return temp
+	var params: [String : String] {
+		var temp = [String:String]()
+		if let format = queryFormat {
+			temp["format"] = format.rawValue
 		}
+		if let langauge = queryLanguage {
+			temp["lang"] = langauge.rawValue
+		}
+		if let callback = queryCallback {
+			temp["nojsoncallback"] = callback.rawValue
+		}
+		
+		return temp
 	}
 	
 	init(format: QueryFormat = .json, language: QueryLanguage = .english, callback: QueryCallback = .noJSONCallback) {
@@ -81,7 +77,7 @@ struct QueryParams {
 }
 
 protocol NetworkingService {
-	func performRequest(route: String, queryParams: QueryParams, successCompletion: @escaping ([String:Any]) -> Void, errorCompletion: @escaping (Error) -> Void)
+	func performRequest(route: String, queryParams: QueryParams, successCompletion: @escaping ([String : Any]) -> Void, errorCompletion: @escaping (Error) -> Void)
 }
 
 extension NetworkingService {
@@ -91,7 +87,7 @@ extension NetworkingService {
 }
 
 class VanillaNetworking : NetworkingService {
-	func performRequest(route: String, queryParams: QueryParams, successCompletion: @escaping ([String:Any]) -> Void, errorCompletion: @escaping (Error) -> Void) {
+	func performRequest(route: String, queryParams: QueryParams, successCompletion: @escaping ([String : Any]) -> Void, errorCompletion: @escaping (Error) -> Void) {
 		guard let url = URLConfig(path: route, queryComponents: queryParams.params).url else {
 			return
 		}
@@ -115,7 +111,7 @@ class VanillaNetworking : NetworkingService {
 			}
 			
 			do {
-				let json = try JSONSerialization.jsonObject(with: data!) as! [String:Any]
+				let json = try JSONSerialization.jsonObject(with: data!) as! [String : Any]
 				print(json)
 				DispatchQueue.main.async {
 					successCompletion(json)

@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct Constants {
-	static let API_HOST: String = "api.flickr.com"
-	static let RECENT_PHOTOS_ROUTE = "/services/feeds/photos_public.gne"
-}
-
 class PhotosAPI {
 	private let networkingService: NetworkingService
 	
@@ -20,12 +15,16 @@ class PhotosAPI {
 		self.networkingService = networkingService
 	}
 	
-	func getRecentPhotos() -> () {
-		networkingService.performRequest(route: Constants.RECENT_PHOTOS_ROUTE, queryParams: QueryParams(),
-		                                 successCompletion: { responseObject in
-											
+	func getRecentPhotos(successCompletion: @escaping (FlickrRecentPhotos) -> Void, errorCompletion: @escaping (Error) -> Void) -> () {
+		networkingService.performRequest(route: Constants.RECENT_PHOTOS_ROUTE, queryParams: QueryParams(), successCompletion: { responseObject in
+			do {
+				let flickrRecentPhotos = try FlickrRecentPhotos(dataArr: responseObject)
+				successCompletion(flickrRecentPhotos)
+			} catch let error {
+				print(error)
+			}
 		}, errorCompletion: { error in
-
+			errorCompletion(error)
 		})
 	}
 }

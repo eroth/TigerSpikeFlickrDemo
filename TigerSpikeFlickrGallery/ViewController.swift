@@ -14,8 +14,12 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		let photos = PhotosAPI.init(networkingService: VanillaNetworking())
-		photos.getRecentPhotos()
+		let photosAPI = PhotosAPI.init(networkingService: VanillaNetworking())
+		photosAPI.getRecentPhotos(successCompletion: { flickrRecentPhotos in
+			
+		}) { (error) in
+			
+		}
 	}
 
 }
