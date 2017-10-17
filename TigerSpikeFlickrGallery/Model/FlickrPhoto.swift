@@ -9,45 +9,54 @@
 import Foundation
 
 class FlickrPhoto {
-	var title: String?
-	var link: String?
-	var mediaURL: String?
-	var dateTaken: String?
-	var photoDescription: String?
-	var publishedDate: String?
-	var author: String?
-	var authorID: String?
-	var tags: String?
+	var title: String
+	var link: String
+	var mediaURL: String
+	var dateTaken: String
+	var photoDescription: String
+	var publishedDate: String
+	var author: String
+	var authorID: String
+	var tags: String
 	
-	init(photoData: [String : Any]) {
-		if let title = photoData["title"] {
-			self.title = String(describing: title)
+	init(photoData: [String : Any]) throws {
+		guard let title = photoData["title"] as? String else {
+			throw DeserializationError.missingKey("title")
 		}
-		if let link = photoData["link"] {
-			self.link = String(describing: link)
+		guard let link = photoData["link"] as? String else {
+			throw DeserializationError.missingKey("link")
 		}
-		if let media = photoData["media"] as? [String:Any] {
-			if let mediaURL = media["m"]  {
-				self.mediaURL = String(describing: mediaURL)
-			}
+		guard let media = photoData["media"] as? [String:Any],
+			let mediaURL = media["m"] as? String else {
+				throw DeserializationError.missingKey("m")
 		}
-		if let dateTaken = photoData["date_taken"] {
-			self.dateTaken = String(describing: dateTaken)
+		guard let dateTaken = photoData["date_taken"] as? String else {
+			throw DeserializationError.missingKey("date_taken")
 		}
-		if let photoDescription = photoData["description"] {
-			self.photoDescription = String(describing: photoDescription)
+		guard let publishedDate = photoData["published"] as? String else {
+			throw DeserializationError.missingKey("published")
 		}
-		if let publishedDate = photoData["published"] {
-			self.publishedDate = String(describing: publishedDate)
+		guard let photoDescription = photoData["description"] as? String else {
+			throw DeserializationError.missingKey("description")
 		}
-		if let author = photoData["author"] {
-			self.author = String(describing: author)
+		guard let author = photoData["author"] as? String else {
+			throw DeserializationError.missingKey("author")
 		}
-		if let authorID = photoData["author_id"] {
-			self.authorID = String(describing: authorID)
+		guard let authorID = photoData["author_id"] as? String else {
+			throw DeserializationError.missingKey("author_id")
 		}
-		if let tags = photoData["tags"] {
-			self.tags = String(describing: tags)
+		guard let tags = photoData["tags"] as? String else {
+			throw DeserializationError.missingKey("tags")
 		}
+		
+		self.title = title
+		self.link = link
+		self.mediaURL = mediaURL
+		self.dateTaken = dateTaken
+		self.publishedDate = publishedDate
+		self.photoDescription = photoDescription
+		self.author = author
+		self.authorID = authorID
+		self.tags = tags
 	}
 }

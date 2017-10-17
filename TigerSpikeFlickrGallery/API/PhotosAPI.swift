@@ -17,8 +17,12 @@ class PhotosAPI {
 	
 	func getRecentPhotos(successCompletion: @escaping (FlickrRecentPhotos) -> Void, errorCompletion: @escaping (Error) -> Void) -> () {
 		networkingService.performRequest(route: Constants.RECENT_PHOTOS_ROUTE, queryParams: QueryParams(), successCompletion: { responseObject in
-			let flickrRecentPhotos = FlickrRecentPhotos(dataArr: responseObject)
-			successCompletion(flickrRecentPhotos)
+			do {
+				let flickrRecentPhotos = try FlickrRecentPhotos(dataArr: responseObject)
+				successCompletion(flickrRecentPhotos)
+			} catch let error {
+				print(error)
+			}
 		}, errorCompletion: { error in
 			errorCompletion(error)
 		})

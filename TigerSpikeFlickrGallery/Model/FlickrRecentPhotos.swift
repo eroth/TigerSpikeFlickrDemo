@@ -8,25 +8,37 @@
 
 import Foundation
 
+enum DeserializationError: Error {
+	case missingKey(String)
+}
+
 class FlickrRecentPhotos {
-	var lastModifiedDate: String?
+	var lastModifiedDate: String
 	private var dataArr = [String : Any]()
 	var photoData = [FlickrPhoto]()
 	
-	init(dataArr: [String : Any]) {
+	init(dataArr: [String : Any]) throws {
 		self.dataArr = dataArr
 		
-		if let lastModifiedDate = dataArr["modified"] {
-			self.lastModifiedDate = String(describing: lastModifiedDate)
+		guard let lastModifiedDate = dataArr["modified"] as? String else {
+			throw DeserializationError.missingKey("modified")
 		}
+		self.lastModifiedDate = lastModifiedDate
 		
 		var deserializedPhotoData = [FlickrPhoto]()
-		if let photoDataArray = self.dataArr["items"] as? [[String : Any]] {
-			for photoData in photoDataArray {
-				let deserializedPhoto = FlickrPhoto(photoData: photoData)
-				deserializedPhotoData.append(deserializedPhoto)
-			}
-			self.photoData = deserializedPhotoData
+		guard let photoDataArray = self.dataArr["items"] as? [[String : Any]] else {
+			throw DeserializationError.missingKey("items")
 		}
+		
+		for photoData in photoDataArray {
+			do {
+				let deserializedPhoto = try FlickrPhoto(photoData: photoData)
+				deserializedPhotoData.append(deserializedPhoto)
+			} catch let error {
+				print(error)
+			}
+		}
+		
+		self.photoData = deserializedPhotoData
 	}
 }
