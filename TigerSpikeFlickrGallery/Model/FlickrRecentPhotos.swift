@@ -14,8 +14,8 @@ enum DeserializationError: Error {
 
 class FlickrRecentPhotos {
 	let lastModifiedDateString: String
-	private var dataArr = [String : Any]()
-	var photoData = [FlickrPhoto]()
+	private var dataArr: [String: Any] = [:]
+	var photoData: [FlickrPhoto] = []
 	
 	init(dataArr: [String : Any]) throws {
 		self.dataArr = dataArr
@@ -25,7 +25,7 @@ class FlickrRecentPhotos {
 		}
 		self.lastModifiedDateString = lastModifiedDateString
 		
-		var deserializedPhotoData = [FlickrPhoto]()
+		var deserializedPhotoData: [FlickrPhoto] = []
 		guard let photoDataArray = self.dataArr["items"] as? [[String : Any]] else {
 			throw DeserializationError.missingKey("items")
 		}
