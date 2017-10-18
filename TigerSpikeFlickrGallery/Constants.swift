@@ -16,4 +16,7 @@ struct Constants {
 	
 	// Cell Identifiers
 	static let PhotosFeedCollectionViewCellReuseIdentifier = "PhotosFeedCollectionViewCellReuseIdentifier"
+	static let PhotoDetailTableViewCellReuseIdentifier = "PhotoDetailTableViewCellReuseIdentifier"
+	static let PhotoDetailRowTableViewCellReuseIdentifier = "PhotoDetailRowTableViewCellReuseIdentifier"
+	static let PhotoDetailSectionTableViewCellReuseIdentifier = "PhotoDetailSectionTableViewCellReuseIdentifier"
 }

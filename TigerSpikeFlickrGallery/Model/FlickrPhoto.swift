@@ -9,15 +9,15 @@
 import Foundation
 
 class FlickrPhoto {
-	var title: String
-	var link: String
-	var mediaURLString: String
-	var dateTakenString: String
-	var photoDescription: String
-	var publishedDateString: String
-	var author: String
-	var authorID: String
-	var tags: String
+	let title: String
+	let link: String
+	let mediaURLString: String
+	let dateTakenString: String
+	let photoDescription: String
+	let publishedDateString: String
+	let author: String
+	let authorID: String
+	let tags: String
 	
 	init(photoData: [String : Any]) throws {
 		guard let title = photoData["title"] as? String else {

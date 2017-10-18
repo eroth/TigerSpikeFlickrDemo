@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="184" height="175"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-mg-tE5" customClass="PhotoImageView" customModule="TigerSpikeFlickrGallery" customModuleProvider="target">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fGK-mg-tE5" customClass="PhotoImageView" customModule="TigerSpikeFlickrGallery" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="184" height="175"/>
                     </imageView>
                 </subviews>

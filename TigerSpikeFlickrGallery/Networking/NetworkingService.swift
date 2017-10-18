@@ -106,9 +106,9 @@ class VanillaNetworking : NetworkingService {
 				
 				return
 			}
+			// Flickr API escapes the "'" character, so have to pull out "\\'" from their response, as it's not valid JSON and will cause JSON parser to fail
 			if let potentiallyBadFlickrJSONString = String(data: data!, encoding: String.Encoding.utf8) {
-				let validFlickrJSONString = potentiallyBadFlickrJSONString.replacingOccurrences(of: "\'", with: "'")
-				print("validFlickrJSONString: \(validFlickrJSONString.description)")
+				let validFlickrJSONString = potentiallyBadFlickrJSONString.replacingOccurrences(of: "\\'", with: "'")
 				if let validFlickrData = validFlickrJSONString.data(using: String.Encoding.utf8) {
 					do {
 						let json = try JSONSerialization.jsonObject(with: validFlickrData) as! [String : Any]
