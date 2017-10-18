@@ -9,7 +9,6 @@
 import UIKit
 
 class PhotoDetailViewController: UIViewController {
-
 	let flickrPhoto: FlickrPhoto
 	let tableViewObject: PhotoDetailTableViewObject
 	let tableView = UITableView()
@@ -37,5 +36,4 @@ class PhotoDetailViewController: UIViewController {
 		tableView.dataSource = tableViewObject
 		tableView.delegate = tableViewObject
     }
-
 }

@@ -81,9 +81,7 @@ protocol NetworkingService {
 }
 
 extension NetworkingService {
-	func performRequest(queryParams: QueryParams = QueryParams()) {
-		
-	}
+	func performRequest(queryParams: QueryParams = QueryParams()) {}
 }
 
 class VanillaNetworking : NetworkingService {

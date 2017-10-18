@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-class PhotosFeedCollectionViewObject: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-	
+class PhotosFeedCollectionViewObject: NSObject {
 	typealias DidSelectPhotoClosure = (_ photoData : FlickrPhoto) -> Void
 	
 	var didSelectPhotoClosure: DidSelectPhotoClosure?
@@ -25,12 +24,22 @@ class PhotosFeedCollectionViewObject: NSObject, UICollectionViewDelegate, UIColl
 			mainPhotosCollectionView.register(UINib.init(nibName: "PhotosFeedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: Constants.PhotosFeedCollectionViewCellReuseIdentifier)
 		}
 	}
-	
-	override init() {
-		super.init()
+}
 
+// MARK: - UICollectionViewDelegate
+extension PhotosFeedCollectionViewObject : UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		if let photoData = photoDataSource?.photoData[indexPath.row] as FlickrPhoto? {
+			didSelectPhotoClosure!(photoData)
+			print(photoData.title)
+			print(photoData.mediaURLString)
+			print(photoData.photoDescription)
+		}
 	}
-	
+}
+
+// MARK: - UICollectionViewDataSource
+extension PhotosFeedCollectionViewObject : UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		let numPhotos = photoDataSource?.photoData.count
 		
@@ -47,18 +56,13 @@ class PhotosFeedCollectionViewObject: NSObject, UICollectionViewDelegate, UIColl
 		
 		return photoCell
 	}
-	
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		if let photoData = photoDataSource?.photoData[indexPath.row] as FlickrPhoto? {
-			didSelectPhotoClosure!(photoData)
-			print(photoData.title)
-			print(photoData.mediaURLString)
-			print(photoData.photoDescription)
-		}
-	}
-	
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension PhotosFeedCollectionViewObject : UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		let width = collectionView.bounds.width/2
+		
 		return CGSize(width: width, height: width)
 	}
 }
