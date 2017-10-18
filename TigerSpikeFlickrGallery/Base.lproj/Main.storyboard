@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photos Feed View Controller-->
+        <!--TigerSpike Flickr Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotosFeedViewController" customModule="TigerSpikeFlickrGallery" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6Au-rn-QGu"/>
+                    <navigationItem key="navigationItem" title="TigerSpike Flickr Demo" id="6Au-rn-QGu"/>
                     <connections>
                         <outlet property="mainPhotosCollectionViewObject" destination="BSH-l1-Is2" id="dYd-EC-z6D"/>
                     </connections>

@@ -13,7 +13,7 @@ enum DeserializationError: Error {
 }
 
 class FlickrRecentPhotos {
-	var lastModifiedDateString: String
+	let lastModifiedDateString: String
 	private var dataArr = [String : Any]()
 	var photoData = [FlickrPhoto]()
 	

@@ -9,7 +9,7 @@
 import UIKit
 
 class PhotosFeedViewController: UIViewController {
-
+	
 	@IBOutlet var mainPhotosCollectionViewObject: PhotosFeedCollectionViewObject!
 	
 	override func viewDidLoad() {
@@ -24,9 +24,9 @@ class PhotosFeedViewController: UIViewController {
 		}
 		
 		mainPhotosCollectionViewObject.didSelectPhotoClosure = { selectedPhotoData in
-			
+			let detailPhotoVC = PhotoDetailViewController(flickrPhoto: selectedPhotoData)
+			self.navigationController?.pushViewController(detailPhotoVC, animated: true)
 		}
 	}
-
 }
 
