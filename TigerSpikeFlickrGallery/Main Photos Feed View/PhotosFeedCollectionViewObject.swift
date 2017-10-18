@@ -30,7 +30,7 @@ class PhotosFeedCollectionViewObject: NSObject {
 extension PhotosFeedCollectionViewObject : UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let photoData = photoDataSource?.photoData[indexPath.row] as FlickrPhoto? {
-			didSelectPhotoClosure!(photoData)
+			didSelectPhotoClosure!(photoData)	
 		}
 	}
 }
