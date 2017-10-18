@@ -10,7 +10,6 @@ import UIKit
 import SDWebImage
 
 class PhotoImageView: UIImageView {
-	
 	func setPhotoImage(forURLString: String) {
 		self.sd_setShowActivityIndicatorView(true)
 		self.sd_setIndicatorStyle(.gray)
