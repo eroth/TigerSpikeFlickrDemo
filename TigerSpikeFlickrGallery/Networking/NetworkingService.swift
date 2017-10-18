@@ -55,7 +55,7 @@ struct QueryParams {
 	var queryCallback: QueryCallback?
 	
 	var params: [String : String] {
-		var temp = [String:String]()
+		var temp: [String:String] = [:]
 		if let format = queryFormat {
 			temp["format"] = format.rawValue
 		}
