@@ -110,7 +110,6 @@ class VanillaNetworking : NetworkingService {
 				if let validFlickrData = validFlickrJSONString.data(using: String.Encoding.utf8) {
 					do {
 						let json = try JSONSerialization.jsonObject(with: validFlickrData) as! [String : Any]
-						print(json)
 						DispatchQueue.main.async {
 							successCompletion(json)
 						}

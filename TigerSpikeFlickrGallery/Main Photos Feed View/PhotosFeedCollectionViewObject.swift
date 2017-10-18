@@ -31,9 +31,6 @@ extension PhotosFeedCollectionViewObject : UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		if let photoData = photoDataSource?.photoData[indexPath.row] as FlickrPhoto? {
 			didSelectPhotoClosure!(photoData)
-			print(photoData.title)
-			print(photoData.mediaURLString)
-			print(photoData.photoDescription)
 		}
 	}
 }
@@ -61,8 +58,8 @@ extension PhotosFeedCollectionViewObject : UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension PhotosFeedCollectionViewObject : UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let width = collectionView.bounds.width/2
+		let widthHeight = collectionView.bounds.width/2
 		
-		return CGSize(width: width, height: width)
+		return CGSize(width: widthHeight, height: widthHeight)
 	}
 }
